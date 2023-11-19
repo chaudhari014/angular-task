@@ -1,0 +1,13 @@
+<p>Task List</p>
+<div class="task-list">
+  <div *ngFor="let task of tasks" class="task-item">
+    <div class="task-details">
+      <div class="task-title">{{ task.title }}</div>
+      <div class="task-description">{{ task.description }}</div>
+      <button class="task-completed" (click)="taskComplete(task.id)">
+        {{ task.completed ? "Completed" : "Not Completed" }}
+      </button>
+    </div>
+    <button (click)="deleteTask(task.id)" class="delete-button">Delete</button>
+  </div>
+</div>
